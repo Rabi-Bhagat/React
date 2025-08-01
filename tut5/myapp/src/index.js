@@ -9,5 +9,3 @@ root.render(
     <Data />
   </React.StrictMode>
 );
-
-
