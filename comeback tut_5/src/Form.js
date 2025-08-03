@@ -9,9 +9,7 @@ const Form = () => {
 
     Name : 
 
-
-
-    <input type='text' value={name}>
+    <input type='text' value="name">
     </input>
 
     </label>
