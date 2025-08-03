@@ -1,11 +1,12 @@
 import './App.css';
-import Data from './Data'; // Import your custom component
+import Form from '../../../comeback tut_5/src/form';
+import Data from './Data'; 
 
 function App() {
   return (
     <div className="App">
       <h1>React Data Component Example</h1>
-      <Data />
+      <Form/>
     </div>
   );
 }
