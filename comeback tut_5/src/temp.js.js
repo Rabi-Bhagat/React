@@ -1,66 +1,43 @@
-import React, { useState } from 'react'
-
+import React, { useState } from 'react';
 
 const Form = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
-  const [name,setname] = useState(" ");
-  const [email,setemail] = useState(" ");
-  const [Password,setPassword] = useState(" ");
+  const handleName = (e) => setName(e.target.value);
+  const handleEmail = (e) => setEmail(e.target.value);
+  const handlePassword = (e) => setPassword(e.target.value);
 
-  const handlename = (e) =>{
-    console.log(e.target.value);
-    setname(e.target.value)
-    
-  }
-
-
-    const handleemail = (e) =>{
-    console.log(e.target.value);
-    setemail(e.target.value) 
-  }
-
-
-      const handlePassword = (e) =>{
-    console.log(e.target.value);
-    setPassword(e.target.value) 
-  }
-
-  const handlesubmit = (e) =>{
+  const handleSubmit = (e) => {
     e.preventDefault();
-  }
+    console.log({ name, email, password });
+  };
+
   return (
+    <form onSubmit={handleSubmit}>
+      <label>
+        Name:
+        <input type='text' value={name} onChange={handleName} />
+      </label>
 
-    <Form>
+      <label>
+        Email:
+        <input type='email' value={email} onChange={handleEmail} />
+      </label>
 
-   
-    <label>
-    Name : 
-    <input type='text' value={name} onChange={handlename}>
-    </input>
-    </label>
+      <label>
+        Password:
+        <input type='password' value={password} onChange={handlePassword} />
+      </label>
 
+      <button type="submit">Submit</button>
 
-    <label>
-    Email : 
-    <input type='text' value={email} onChange={handleemail}>
-    </input>
-    </label>
-
-    <label>
-    Password: 
-    <input type='text' value={Password} onChange={handlePassword}>
-    </input>
-    </label>
-
-    <button></button>
-
-    {name}
-    {email}
-    {Password}
- 
-
-</Form>
-  )
-}
+      <p>Name: {name}</p>
+      <p>Email: {email}</p>
+      <p>Password: {password}</p>
+    </form>
+  );
+};
 
 export default Form;
