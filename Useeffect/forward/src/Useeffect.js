@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useEffect } from 'react';
 
-const Useeffect =() =>{
-
-    Useeffect(() =>{
-
-    },dependencied)
-
-const Useeffect
+const UseEffect = () => {
+  useEffect(() => {
+    console.log("Component mounted");
+  }, []); 
 
   return (
     <div>
-      
+      <button>welcome</button>
+      <br/>
+      <hr/>
+      <button>To</button>
+      <hr/>
+      <br/>
+      <button>consistency</button>
     </div>
-  )
+  );
+};
 
-export default Useeffect
+export default UseEffect;
